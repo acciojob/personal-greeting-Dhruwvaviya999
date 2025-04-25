@@ -1,18 +1,18 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import React from "react";
-import './../styles/App.css';
-import { useState } from 'react';
+function App() {
+  const [name, setName] = useState("");
 
-const App = () => {
-  const [count, setCount] = useState(0);
-  
   return (
-    <div>
-        {/* Do not remove the main div */}
-      <p>Button clicked {count} times</p>
-      <button onClick={()=> setCount(count+1)}>Click Me</button>
-    </div>
+    <>
+      <input type="text" name="name" id="name" placeholder='Enter Your Name' onChange={(e) => setName(e.target.value)}/>
+
+      <h1>Hello, {name}!</h1>
+    </>
   )
 }
 
-export default App;
+export default App
