@@ -7,7 +7,7 @@ import { useState } from 'react';
    return (
      <div>
           <input type="text" name="name" id="name" placeholder='Enter Your Name' onChange={(e) => setName(e.target.value)}/>
-          <h1>Hello, {name}!</h1>
+          <h1>Hello {name}!</h1>
      </div>
    )
  }
